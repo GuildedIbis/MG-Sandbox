@@ -1,0 +1,27 @@
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MG Sandbox.exe
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MG Sandbox.deps.json
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MG Sandbox.runtimeconfig.json
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MG Sandbox.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MG Sandbox.pdb
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\MonoGame.Framework.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.csproj.AssemblyReference.cache
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.AssemblyInfoInputs.cache
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.AssemblyInfo.cs
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.csproj.CoreCompileInputs.cache
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.csproj.Up2Date
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\refint\MG Sandbox.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.pdb
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.genruntimeconfig.cache
+D:\Projects\C#\MG Sandbox\MG Sandbox\obj\Debug\net6.0\ref\MG Sandbox.dll
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\Content\spr_gui_healthbar_radial_fill_health.xnb
+D:\Projects\C#\MG Sandbox\MG Sandbox\bin\Debug\net6.0\Content\spr_gui_healthbar_radial_fill_yellow.xnb

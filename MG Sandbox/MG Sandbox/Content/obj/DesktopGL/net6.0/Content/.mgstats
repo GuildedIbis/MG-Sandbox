@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/Projects/C#/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_health.png","D:/Projects/C#/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/Content/spr_gui_healthbar_radial_fill_health.xnb","TextureProcessor","Texture2DContent",264,4181,0.1010519
+"D:/Projects/C#/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_yellow.png","D:/Projects/C#/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/Content/spr_gui_healthbar_radial_fill_yellow.xnb","TextureProcessor","Texture2DContent",266,4181,0.0930967
