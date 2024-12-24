@@ -15,16 +15,18 @@ namespace MG_Sandbox
 {
     internal class Player : Entity
     {
+        public Vector2 velNorm;
         public Player(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color) 
         {
-
+            //All Values Inherited
         }
-        
         //
         public void Update(GameTime gameTime, List<Entity> collisionGroup)
         {
-            
-            //
+
+            //Set Velocity
+            velocity.X = 0;
+            velocity.Y = 0;
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 velocity.X = 1;
@@ -41,6 +43,11 @@ namespace MG_Sandbox
             {
                 velocity.Y = -1;
             }
+            //Normalize Veloicty 
+            //velNorm = Vector2.Normalize(velocity);
+            //if (velocity.X != 0) { velocity.X = velNorm.X; }
+            //if (velocity.Y != 0) { velocity.Y = velNorm.Y; }
+            //Calculate Collision
             foreach (var ent in collisionGroup)
             {
                 if (ent == this)
@@ -51,8 +58,6 @@ namespace MG_Sandbox
                     Debug.WriteLine("Collided");
                     velocity.X = 0;
                     velocity.Y = 0;
-                    //velocity.X = -velocity.X;
-                    //velocity.Y = -velocity.Y;
                     Debug.WriteLine(velocity);
                 }
                 else
@@ -60,16 +65,12 @@ namespace MG_Sandbox
                     collided = false;
                 }
             }
+            //Apply Movement
             if (!collided)
             {
                 position.X = position.X + velocity.X;
                 position.Y = position.Y + velocity.Y;
             }
         }
-        //
-        //public override void Update(GameTime gameTime, List<Sprite> collisionGroup)
-        //{
-        //    base.Update(gameTime);
-        //}
     }
 }

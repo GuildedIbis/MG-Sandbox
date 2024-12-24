@@ -16,7 +16,7 @@ namespace MG_Sandbox
     internal class Entity : Sprite
     {
         public Vector2 velocity;
-        public float speed;
+        public double speed;
         public bool collided;
         public Entity(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color) 
         {

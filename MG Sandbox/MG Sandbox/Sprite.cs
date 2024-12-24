@@ -13,7 +13,7 @@ namespace MG_Sandbox
     internal class Sprite
     {
         //
-        public static readonly float SCALE = 1.0f;
+        public static readonly double SCALE = 1.0;
         //
         public Texture2D texture;
         public Vector2 position;
