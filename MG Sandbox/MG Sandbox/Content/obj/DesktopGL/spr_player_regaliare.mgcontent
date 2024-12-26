@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_yellow.png</SourceFile>
-  <SourceTime>2024-07-12T22:57:11.08471-04:00</SourceTime>
-  <DestFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/Content/spr_gui_healthbar_radial_fill_yellow.xnb</DestFile>
-  <DestTime>2024-12-25T18:59:34.7356272-05:00</DestTime>
+  <SourceFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_player_regaliare.png</SourceFile>
+  <SourceTime>2024-08-10T20:45:54.4512153-04:00</SourceTime>
+  <DestFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/spr_player_regaliare.xnb</DestFile>
+  <DestTime>2024-12-25T19:07:58.1915604-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -108,11 +108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\MG Sandbox\\MG Sandbox\\MG Sandbox.csproj",
+      "projectUniqueName": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\MG Sandbox.csproj",
       "projectName": "MG Sandbox",
-      "projectPath": "D:\\Projects\\C#\\MG Sandbox\\MG Sandbox\\MG Sandbox.csproj",
+      "projectPath": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\MG Sandbox.csproj",
       "packagesPath": "C:\\Users\\maver\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\MG Sandbox\\MG Sandbox\\obj\\",
+      "outputPath": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

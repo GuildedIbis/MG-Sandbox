@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Projects/C#/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_health.png</SourceFile>
+  <SourceFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_health.png</SourceFile>
   <SourceTime>2024-06-27T20:30:31.3330429-04:00</SourceTime>
-  <DestFile>D:/Projects/C#/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/spr_gui_healthbar_radial_fill_health.xnb</DestFile>
-  <DestTime>2024-11-29T00:02:15.9047945-05:00</DestTime>
+  <DestFile>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/bin/DesktopGL/spr_gui_healthbar_radial_fill_health.xnb</DestFile>
+  <DestTime>2024-12-25T19:07:58.1047553-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
