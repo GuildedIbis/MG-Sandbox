@@ -17,9 +17,12 @@ namespace MG_Sandbox
 {
     internal class Entity : Sprite
     {
+        //
         public Vector2 velocity;
         public double speed;
-        public bool collided;
+        public bool collided = false;
+        //
+        //List<Entity> entities;
         public Entity(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color) 
         {
 
@@ -39,6 +42,11 @@ namespace MG_Sandbox
         }
         //
         public virtual void Update(GameTime gameTime)
+        {
+
+        }
+        //
+        public virtual void Draw(GameTime gameTime)
         {
 
         }

@@ -27,13 +27,14 @@ namespace MG_Sandbox
         }
         public void LoadContent()
         {
-            animator = new(16, 16, new Vector2(64, 64));
+            //animator = new(16, 16, new Vector2(64, 64));
         }
         //
-        public void Update(GameTime gameTime, List<Entity> collisionGroup)
+        public override void Update(GameTime gameTime)
         {
 
             //Set Velocity
+            //Debug.WriteLine("Update Player");
             velocity.X = 0;
             velocity.Y = 0;
             if (Keyboard.GetState().IsKeyDown(Keys.D))
@@ -57,8 +58,8 @@ namespace MG_Sandbox
             //if (velocity.X != 0) { velocity.X = velNorm.X; }
             //if (velocity.Y != 0) { velocity.Y = velNorm.Y; }
             //Calculate Collision
-            
-            foreach (var ent in collisionGroup)
+            /*
+            foreach (var ent in entities)
             {
                 if (ent == this)
                 { continue; }
@@ -75,7 +76,7 @@ namespace MG_Sandbox
                     collided = false;
                 }
             }
-            
+            */
             //Apply Movement
             if (!collided)
             {
@@ -84,7 +85,7 @@ namespace MG_Sandbox
             }
         }
         //
-        public void Draw(GameTime gameTime, SpriteBatch _spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch _spriteBatch)
         {
             _spriteBatch.Draw(
                 spritesheet,

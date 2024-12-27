@@ -14,8 +14,7 @@ namespace MG_Sandbox
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
-        //List<Entity> entities;
+        List<Entity> entities = new();
         Player player;
         Texture2D spritesheet;
         
@@ -30,54 +29,47 @@ namespace MG_Sandbox
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-            base.Initialize();
-            
+            base.Initialize(); 
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            //entities = new();
-            // TODO: use this.Content to load your game content here
+            //Load Assets
             spritesheet = Content.Load<Texture2D>("spr_player_regaliare");
-            player.LoadContent();
-            //Texture2D enemy_texture = Content.Load<Texture2D>("spr_gui_healthbar_radial_fill_health");
-            //entities.Add(new Entity(enemy_texture, new Vector2(100,100), Color.White));
-            //entities.Add(new Entity(enemy_texture, new Vector2(100,200), Color.White));
-            //entities.Add(new Entity(enemy_texture, new Vector2(200, 100), Color.White));
-            //player = new Player(spritesheet, new Vector2(200, 200), Color.White);
-            //entities.Add(player);
+            player = new Player(spritesheet, new Vector2(0, 0), Color.White);
+            //Debug.WriteLine(entities.GetType);
+            entities.Add(player);
         }
 
         protected override void Update(GameTime gameTime)
         {
+            //Close Game Window
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
                 Exit();
-            // TODO: Add your update logic here
-            //foreach (var sprite in entities)
-            //{
-            //    sprite.Update(gameTime);
-            //}
-            //player.Update(gameTime, entities);
-            animator.Update();
+            }
+                
+            //Main Loop
+            foreach (var entity in entities)
+            {
+                //Debug.WriteLine(entity);
+                entity.Update(gameTime);
+            }
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
+            //Window Base Color
             GraphicsDevice.Clear(Color.DarkGreen);
 
-            // TODO: Add your drawing code here
+            //Main Render
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            //foreach (var sprite in entities)
-            //{
-            //    sprite.Draw(_spriteBatch);
-            //
-            //}
-            player.Draw(_spriteBatch);
-            
+            foreach (var entity in entities)
+            {
+                entity.Draw(_spriteBatch);
+            }
             _spriteBatch.End();
             base.Draw(gameTime);
         }
