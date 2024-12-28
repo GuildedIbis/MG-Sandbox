@@ -14,6 +14,7 @@ namespace MG_Sandbox
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private GameManger _gameManger;
         List<Entity> entities = new();
         Player player;
         Texture2D spritesheet;

@@ -88,7 +88,7 @@ namespace MG_Sandbox
                 position.X = position.X + velocity.X;
                 position.Y = position.Y + velocity.Y;
             }
-            animator.Update();
+            animator.Update(velocity);
         }
         //
         public override void Draw(GameTime gameTime, SpriteBatch _spriteBatch)
