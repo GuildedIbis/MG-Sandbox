@@ -25,7 +25,9 @@ namespace MG_Sandbox
         //List<Entity> entities;
         public Entity(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color) 
         {
-
+            this.texture = _texture;
+            this.position = _position;
+            this.color = _color;
         }
         //
         public Rectangle Collision
@@ -40,16 +42,9 @@ namespace MG_Sandbox
                 );
             }
         }
+ 
         //
-        public virtual void Update(GameTime gameTime)
-        {
-
-        }
-        //
-        public virtual void Draw(GameTime gameTime)
-        {
-
-        }
+     
         //
         //public override void Update(GameTime gameTime, List<Sprite> collisionGroup)
         //{

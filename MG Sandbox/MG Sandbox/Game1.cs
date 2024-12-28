@@ -40,6 +40,7 @@ namespace MG_Sandbox
             player = new Player(spritesheet, new Vector2(0, 0), Color.White);
             //Debug.WriteLine(entities.GetType);
             entities.Add(player);
+            player.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)
@@ -68,7 +69,7 @@ namespace MG_Sandbox
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             foreach (var entity in entities)
             {
-                entity.Draw(_spriteBatch);
+                entity.Draw(gameTime, _spriteBatch);
             }
             _spriteBatch.End();
             base.Draw(gameTime);

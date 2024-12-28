@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MG Sandbox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1612e2a3939c6f03be887c2935a6155a7a1f96d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d29451e0b693896adcf28d52efcd0d9f15fa4a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MG Sandbox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MG Sandbox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,6 +17,7 @@ namespace MG_Sandbox
         int numFrames;
         int numCol;
         Vector2 size;
+        Vector2 velocity;
 
         int counter = 0;
         int activeFrame = 0;
@@ -24,23 +25,46 @@ namespace MG_Sandbox
 
         int rowPos;
         int colPos;
+        //
         public AnimationManager(int _numFrames, int _numCol, Vector2 _size) {
             this.numFrames = _numFrames;
             this.numCol = _numCol;
             this.size = _size;
         }
-
-        public void Update()
+        //
+        //
+        public void Update(Vector2 _velocity)
         {
             counter++;
+            velocity = _velocity;
             //Debug.WriteLine(counter);
             if (counter > interval)
             {
                 counter = 0;
+                SetDirection();
                 NextFrame(); 
             }
         }
-
+        //
+        /*
+        public void SetDirection()
+        {
+            var _totalFrames = numFrames / 4;
+            var _direction = velocity;
+            //Set Dir
+            image_index = local_frame + (_direction * _totalFrames);
+            local_frame = local_frame + sprite_get_speed(sprite_index) / _frameRate;
+            //Cuts the degree by 90 to give you a number between 0 and 3
+            //The 0-3 is multiplied by the 1/4 frame number because all four sprites are within a single sprite.
+            //Local frame then increments in the speed of the animation
+            if (local_frame >= _totalFrames)
+            {
+                animation_end = true;
+                local_frame = local_frame - _totalFrames;
+            }
+            else animation_end = false;
+        }
+        */
         public void NextFrame()
         {
             activeFrame++;
@@ -58,7 +82,8 @@ namespace MG_Sandbox
                 rowPos++;
             }
         }
-
+        //
+        //
         public Rectangle GetFrame()
         {
             return new Rectangle(

@@ -23,12 +23,17 @@ namespace MG_Sandbox
         Texture2D spritesheet;
         public Player(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color) 
         {
-            //All Values Inherited
+            this.texture = _texture;
+            this.position = _position;
+            this.color = _color;
         }
         public void LoadContent()
         {
-            //animator = new(16, 16, new Vector2(64, 64));
+            spritesheet = texture;
+            animator = new(12, 16, new Vector2(64, 64));
+            Debug.WriteLine("Player Loaded");
         }
+        //
         //
         public override void Update(GameTime gameTime)
         {
@@ -83,13 +88,14 @@ namespace MG_Sandbox
                 position.X = position.X + velocity.X;
                 position.Y = position.Y + velocity.Y;
             }
+            animator.Update();
         }
         //
         public override void Draw(GameTime gameTime, SpriteBatch _spriteBatch)
         {
             _spriteBatch.Draw(
                 spritesheet,
-                new Rectangle(0, 0, 64, 64),
+                new Rectangle((int)position.X, (int)position.Y, 64, 64),
                 animator.GetFrame(),
                 Color.White
                 );
