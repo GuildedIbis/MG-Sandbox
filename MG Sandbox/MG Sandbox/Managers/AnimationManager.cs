@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using Vector2 = Microsoft.Xna.Framework.Vector2;
-using Color = Microsoft.Xna.Framework.Color;
-using Rectangle = Microsoft.Xna.Framework.Rectangle;
-using System.Diagnostics;
-
-namespace MG_Sandbox
+﻿//AnimationManager.cs
+//
+//Use: Control Animation for Sprite Class objects
+//
+namespace MG_Sandbox.Managers
 {
     internal class AnimationManager
     {
@@ -27,27 +19,28 @@ namespace MG_Sandbox
         int localFrame = 0;
         int interval = 15;
         //
-        public AnimationManager(int _numFrames, int _numCol, Vector2 _size) {
-            this.numFrames = _numFrames;
-            this.numCol = _numCol;
-            this.size = _size;
+        public AnimationManager(int _numFrames, int _numCol, Vector2 _size)
+        {
+            numFrames = _numFrames;
+            numCol = _numCol;
+            size = _size;
         }
         //
         //
-        public void Update(Vector2 _velocity)
+        public void Update()
         {
             counter++;
-            velocity = _velocity;
+            //velocity = _velocity;
             //Debug.WriteLine(counter);
             if (counter > interval)
             {
                 counter = 0;
                 //SetDirection();
-                NextFrame(); 
+                NextFrame();
             }
         }
         //
-        //
+        /*
         public void SetDirection()
         {
             var _totalFrames = numFrames / 4;
@@ -55,7 +48,7 @@ namespace MG_Sandbox
 
             _direction =
             //Set Dir
-            activeFrame = localFrame + (_direction * _totalFrames);
+            activeFrame = localFrame + _direction * _totalFrames;
             localFrame = localFrame + sprite_get_speed(sprite_index) / _frameRate;
             //Cuts the degree by 90 to give you a number between 0 and 3
             //The 0-3 is multiplied by the 1/4 frame number because all four sprites are within a single sprite.
@@ -67,7 +60,7 @@ namespace MG_Sandbox
             }
             else animation_end = false;
         }
-        //
+        */
         //
         public void NextFrame()
         {

@@ -1,12 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Vector2 = Microsoft.Xna.Framework.Vector2;
-using Color = Microsoft.Xna.Framework.Color;
-using Rectangle = Microsoft.Xna.Framework.Rectangle;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System;
+﻿//Game1.cs
+//
+//Main Game
+//
+using MG_Sandbox.Managers;
 
 namespace MG_Sandbox
 {
@@ -14,12 +10,7 @@ namespace MG_Sandbox
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private GameManger _gameManger;
-        List<Entity> entities = new();
-        Player player;
-        Texture2D spritesheet;
-        
-        
+        private GameManager _gameManager;
 
         public Game1()
         {
@@ -30,35 +21,41 @@ namespace MG_Sandbox
 
         protected override void Initialize()
         {
+            //Base Window Settings
+            Globals.Bounds = new(960, 540);
+            _graphics.PreferredBackBufferWidth = Globals.Bounds.X;
+            _graphics.PreferredBackBufferHeight = Globals.Bounds.Y;
+            _graphics.ApplyChanges();
+            Globals.Content = Content;
+
+            //Create Main Game Loop
+            _gameManager = new();
+
+            //Base Initialization
             base.Initialize(); 
         }
 
         protected override void LoadContent()
         {
+            //Set Global Access to Main Sprite Batch
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            //Load Assets
-            spritesheet = Content.Load<Texture2D>("spr_player_regaliare");
-            player = new Player(spritesheet, new Vector2(0, 0), Color.White);
-            //Debug.WriteLine(entities.GetType);
-            entities.Add(player);
-            player.LoadContent();
+            Globals.SpriteBatch = _spriteBatch;
         }
 
         protected override void Update(GameTime gameTime)
         {
-            //Close Game Window
+            //Esc: Close Game Loop and Window
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
             }
                 
             //Main Loop
-            foreach (var entity in entities)
-            {
-                //Debug.WriteLine(entity);
-                entity.Update(gameTime);
-            }
-            base.Update(gameTime);
+            Globals.Update(gameTime); //Update Game time elapsed
+            _gameManager.Update(); //Main Game Logic Update
+
+            //Base Update
+            base.Update(gameTime); 
         }
 
         protected override void Draw(GameTime gameTime)
@@ -68,11 +65,10 @@ namespace MG_Sandbox
 
             //Main Render
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            foreach (var entity in entities)
-            {
-                entity.Draw(gameTime, _spriteBatch);
-            }
+            _gameManager.Draw();
             _spriteBatch.End();
+
+            //Base Draw
             base.Draw(gameTime);
         }
     }

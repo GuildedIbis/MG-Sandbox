@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Vector2 = Microsoft.Xna.Framework.Vector2;
-
+﻿//Sprite.cs
+//
+//Use: Base Class for rendering 2D textures (with transformations)
+//
 namespace MG_Sandbox
 {
     internal class Sprite
@@ -38,14 +32,14 @@ namespace MG_Sandbox
             this.position = _position;
             this.color = _color;
         }
-        public virtual void Update(GameTime gameTime)
+        public virtual void Update()
         {
             
         }
 
-        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public virtual void Draw()
         {
-            spriteBatch.Draw(texture, Rect, Color.White);
+            Globals.SpriteBatch.Draw(texture, Rect, Color.White);
         }
     }
 }

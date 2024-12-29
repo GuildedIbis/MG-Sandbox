@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using static System.Formats.Asn1.AsnWriter;
-using Vector2 = Microsoft.Xna.Framework.Vector2;
-using Color = Microsoft.Xna.Framework.Color;
-using Rectangle = Microsoft.Xna.Framework.Rectangle;
-
+﻿//Entity.CS
+//
+//Use: Sprite Class objects that should also have collision applied.
+//
 namespace MG_Sandbox
 {
     internal class Entity : Sprite
     {
         //
         public Vector2 velocity;
-        public double speed;
+        public float speed;
         public bool collided = false;
         //
         //List<Entity> entities;
@@ -42,13 +31,5 @@ namespace MG_Sandbox
                 );
             }
         }
- 
-        //
-     
-        //
-        //public override void Update(GameTime gameTime, List<Sprite> collisionGroup)
-        //{
-        //    base.Update(gameTime);
-        //}
     }
 }
