@@ -2,6 +2,8 @@
 //
 //Use: Control Animation for Sprite Class objects
 //
+using System.Diagnostics;
+
 namespace MG_Sandbox.Managers
 {
     internal class AnimationManager
@@ -14,10 +16,11 @@ namespace MG_Sandbox.Managers
         int rowPos;
         int colPos;
         //
-        int counter = 0;
-        int activeFrame = 0;
-        int localFrame = 0;
-        int interval = 15;
+        public int counter = 0;
+        public int activeFrame = 0;
+        public int localFrame = 0;
+        public int interval = 15;
+        public int animDir = 0;
         //
         public AnimationManager(int _numFrames, int _numCol, Vector2 _size)
         {
@@ -35,32 +38,27 @@ namespace MG_Sandbox.Managers
             if (counter > interval)
             {
                 counter = 0;
-                //SetDirection();
                 NextFrame();
+                SetDirection();
             }
         }
         //
-        /*
+        //
         public void SetDirection()
         {
             var _totalFrames = numFrames / 4;
-            var _direction;
-
-            _direction =
             //Set Dir
-            activeFrame = localFrame + _direction * _totalFrames;
-            localFrame = localFrame + sprite_get_speed(sprite_index) / _frameRate;
-            //Cuts the degree by 90 to give you a number between 0 and 3
-            //The 0-3 is multiplied by the 1/4 frame number because all four sprites are within a single sprite.
-            //Local frame then increments in the speed of the animation
-            if (local_frame >= _totalFrames)
+            Debug.Write("animDir: ");
+            Debug.WriteLine(animDir);
+            activeFrame = localFrame + animDir * _totalFrames;
+            localFrame = localFrame + 1;
+            Debug.WriteLine(localFrame);
+            if (localFrame >= _totalFrames)
             {
-                animation_end = true;
-                local_frame = local_frame - _totalFrames;
+                localFrame = localFrame - _totalFrames;
             }
-            else animation_end = false;
         }
-        */
+        //
         //
         public void NextFrame()
         {

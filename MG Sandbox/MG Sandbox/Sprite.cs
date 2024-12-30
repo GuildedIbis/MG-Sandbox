@@ -2,6 +2,8 @@
 //
 //Use: Base Class for rendering 2D textures (with transformations)
 //
+using MG_Sandbox.Managers;
+
 namespace MG_Sandbox
 {
     internal class Sprite
@@ -10,8 +12,9 @@ namespace MG_Sandbox
         public static readonly double SCALE = 1.0;
         //
         public Texture2D texture;
+        public Texture2D spritesheet;
+        public AnimationManager animator;
         public Vector2 position;
-        public Vector2 velocity;
         public Color color;
         //
         public Rectangle Rect

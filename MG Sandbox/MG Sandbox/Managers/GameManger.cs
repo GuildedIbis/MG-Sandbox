@@ -3,6 +3,7 @@
 //Use: Main Game Logic used in Game1
 //
 using System.Collections.Generic;
+using MG_Sandbox.Entities;
 
 
 namespace MG_Sandbox.Managers
