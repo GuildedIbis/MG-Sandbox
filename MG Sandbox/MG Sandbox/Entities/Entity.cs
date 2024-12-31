@@ -42,8 +42,8 @@ namespace MG_Sandbox.Entities
             var angle = radians * (180 / Math.PI);
             angle = angle - 90;
             angle = (angle + 360) % 360;
-            Debug.Write("Angle: ");
-            Debug.WriteLine(angle);
+            //Debug.Write("Angle: ");
+            //Debug.WriteLine(angle);
             return (int)angle;
         }
     }

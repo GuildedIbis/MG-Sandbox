@@ -2,13 +2,20 @@
 //
 //Use: The Entity controlled by the client
 //
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using MG_Sandbox.Managers;
 //
 namespace MG_Sandbox.Entities
 {
     internal class Player : Entity
     {
+        public List<int> animWalkRight;
+        public List<int> animWalkUp;
+        public List<int> animWalkLeft;
+        public List<int> animWalkDown;
+        int[] animKey = new int[] { };
         public Player(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color)
         {
             texture = _texture;
@@ -17,10 +24,30 @@ namespace MG_Sandbox.Entities
         }
         public void LoadContent()
         {
+            
             spritesheet = texture;
             speed = 40;
-            animator = new(16, 16, new Vector2(64, 64));
+            
             Debug.WriteLine("Player Loaded");
+            List<int> animWalkRight = new List<int>();
+            animKey = new int[] { 0, 1, 2, 3 };
+            animWalkRight.AddRange(animKey);
+
+            List<int> animWalkUp = new List<int>();
+            animKey =  new int[] { 4, 5, 6, 7 };
+            animWalkUp.AddRange(animKey);
+
+            List<int> animWalkLeft = new List<int>();
+            animKey = new int[] { 8, 9, 10, 11 };
+            animWalkLeft.AddRange(animKey);
+
+            List<int> animWalkDown = new List<int>();
+            animKey = new int[] { 12, 13, 14, 15 };
+            animWalkDown.AddRange(animKey);
+
+            //Debug.WriteLine(animWalkUp.Count);
+
+            animator = new(animWalkUp, 16, new Vector2(64, 64));
         }
         //
         //
@@ -60,6 +87,15 @@ namespace MG_Sandbox.Entities
                     MathHelper.Clamp(newPos.X, 0, Globals.Bounds.X),
                     MathHelper.Clamp(newPos.Y, 0, Globals.Bounds.Y)
                     );
+                if (InputManager.MoveKeyPressed)
+                { 
+                    switch (moveAngle / 90)
+                    {
+                        case 0:
+                            animator = new(animWalkRight, 16, new Vector2(64, 64));
+                            break;
+                    }
+                }
 
             }
         }

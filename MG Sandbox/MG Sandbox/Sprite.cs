@@ -44,5 +44,10 @@ namespace MG_Sandbox
         {
             Globals.SpriteBatch.Draw(texture, Rect, Color.White);
         }
+
+        public virtual void createAnimation()
+        {
+
+        }
     }
 }

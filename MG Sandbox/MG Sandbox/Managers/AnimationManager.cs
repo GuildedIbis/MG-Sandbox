@@ -2,7 +2,9 @@
 //
 //Use: Control Animation for Sprite Class objects
 //
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MG_Sandbox.Managers
 {
@@ -11,7 +13,7 @@ namespace MG_Sandbox.Managers
         //
         Vector2 size;
         Vector2 velocity;
-        int numFrames;
+        List<int> animKeys;
         int numCol;
         int rowPos;
         int colPos;
@@ -22,9 +24,9 @@ namespace MG_Sandbox.Managers
         public int interval = 15;
         public int animDir = 0;
         //
-        public AnimationManager(int _numFrames, int _numCol, Vector2 _size)
+        public AnimationManager(List<int> _animKeys, int _numCol, Vector2 _size)
         {
-            numFrames = _numFrames;
+            animKeys = _animKeys;
             numCol = _numCol;
             size = _size;
         }
@@ -35,10 +37,17 @@ namespace MG_Sandbox.Managers
             counter++;
             //velocity = _velocity;
             //Debug.WriteLine(counter);
+            //if (velocity != 0)
             if (counter > interval)
             {
                 counter = 0;
-                NextFrame();
+                localFrame++;
+                //Debug.WriteLine(colPos);
+                if (localFrame >= animKeys.Count)
+                {
+                    localFrame = 0;
+
+                }
                 SetDirection();
             }
         }
@@ -46,41 +55,17 @@ namespace MG_Sandbox.Managers
         //
         public void SetDirection()
         {
-            var _totalFrames = numFrames / 4;
             //Set Dir
             Debug.Write("animDir: ");
             Debug.WriteLine(animDir);
-            activeFrame = localFrame + animDir * _totalFrames;
-            localFrame = localFrame + 1;
-            Debug.WriteLine(localFrame);
-            if (localFrame >= _totalFrames)
-            {
-                localFrame = localFrame - _totalFrames;
-            }
-        }
-        //
-        //
-        public void NextFrame()
-        {
-            activeFrame++;
-            colPos++;
-            //Debug.WriteLine(colPos);
-            if (activeFrame >= numFrames)
-            {
-                activeFrame = 0;
-                colPos = 0;
-                rowPos = 0;
-            }
-            if (colPos >= numCol)
-            {
-                colPos = 0;
-                rowPos++;
-            }
+            
         }
         //
         //
         public Rectangle GetFrame()
         {
+            colPos = animKeys.ElementAt(localFrame) % numCol;
+            rowPos = animKeys.ElementAt(localFrame) / numCol;
             return new Rectangle(
                 colPos * (int)size.X,
                 rowPos * (int)size.Y,
@@ -88,5 +73,15 @@ namespace MG_Sandbox.Managers
                 (int)size.Y);
         }
         //
+        //
+        public void MoveAnimation()
+        {
+            switch(animDir)
+            {
+                case 0:
+                    return anim
+                    break;
+            }
+        }
     }
 }
