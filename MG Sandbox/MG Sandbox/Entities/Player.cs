@@ -1,6 +1,6 @@
 ﻿//Player.cs
 //
-//Use: The Entity controlled by the client
+//Use: Running independently in Game1 - Main Player Avatar Logic
 //
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,6 +15,12 @@ namespace MG_Sandbox.Entities
         public AnimationManager animWalkUp;
         public AnimationManager animWalkLeft;
         public AnimationManager animWalkDown;
+        public AnimationManager animIdleRight;
+        public AnimationManager animIdleUp;
+        public AnimationManager animIdleLeft;
+        public AnimationManager animIdleDown;
+
+
         int[] animKey = new int[] { };
         List<int> keyList = new List<int>();
         public Player(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color)
@@ -25,39 +31,8 @@ namespace MG_Sandbox.Entities
         }
         public void LoadContent()
         {
-            
-            spritesheet = texture;
             speed = 40;
-
-            //animator = new(16, new Microsoft.Xna.Framework.Vector2(64, 64));
-
-            Debug.WriteLine("Player Loaded");
-            
-            animKey = new int[] { 0, 1, 2, 3 };
-            keyList.Clear();
-            keyList.AddRange(animKey);
-            animWalkRight = new(keyList, 16, new Vector2(64, 64));
-            animator = animWalkRight;
-
-            animKey =  new int[] { 4, 5, 6, 7 };
-            keyList.Clear();
-            keyList.AddRange(animKey);
-            animWalkUp = new(keyList, 16, new Vector2(64, 64));
-            animator = animWalkUp;
-
-            animKey = new int[] { 8, 9, 10, 11 };
-            keyList.Clear();
-            keyList.AddRange(animKey);
-            animWalkLeft = new(keyList, 16, new Vector2(64, 64));
-            animator = animWalkLeft;
-
-            animKey = new int[] { 12, 13, 14, 15 };
-            keyList.Clear();
-            keyList.AddRange(animKey);
-            animWalkDown = new(keyList, 16, new Vector2(64, 64));
-            animator = animWalkDown;
-
-            //Debug.WriteLine(animator.animations);
+            PlayerLoadAnimations();
         }
         //
         //
@@ -67,13 +42,15 @@ namespace MG_Sandbox.Entities
             //Set Velocity
             PlayerMove();
             //PlayerCollide();
+            PlayerUpdateAnimations();
             animator.Update();
         }
+        //
         //
         public override void Draw()
         {
             Globals.SpriteBatch.Draw(
-                spritesheet,
+                texture,
                 new Rectangle((int)position.X, (int)position.Y, 64, 64),
                 animator.GetFrame(),
                 Color.White
@@ -92,31 +69,12 @@ namespace MG_Sandbox.Entities
                 var newY = (float)(position.Y + normDir.Y * speed * Globals.TotalSeconds);
                 var newPos = new Vector2(newX, newY);
                 moveAngle = MoveDirectionAngle((double)dir.X, (double)dir.Y);
+                lastAngle = moveAngle;
                 //animator.animDir = moveAngle / 90;
                 position = new Vector2(
                     MathHelper.Clamp(newPos.X, 0, Globals.Bounds.X),
                     MathHelper.Clamp(newPos.Y, 0, Globals.Bounds.Y)
                     );
-                switch (moveAngle / 90)
-                {
-                    case 0:
-                        animator = animWalkRight;
-                        break;
-                    case 1:
-                        animator = animWalkUp;
-                        break;
-                    case 2:
-                        animator = animWalkLeft;
-                        break;
-                    case 3:
-                        animator = animWalkDown;
-                        break;
-                    default:
-                        Debug.WriteLine("Default Animation");
-                        animator = animWalkLeft;
-                        break;
-                }
-
             }
         }
         //
@@ -142,6 +100,97 @@ namespace MG_Sandbox.Entities
                 }
             }
             */
+        }
+        //
+        //
+        public void PlayerLoadAnimations()
+        {
+            animKey = new int[] { 0, 1, 2, 3 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkRight = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 4, 5, 6, 7 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkUp = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 8, 9, 10, 11 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkLeft = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 12, 13, 14, 15 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkDown = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 1 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animIdleRight = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 5 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animIdleUp = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 9 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animIdleLeft = new(keyList, 16, new Vector2(64, 64));
+
+            animKey = new int[] { 13 };
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animIdleDown = new(keyList, 16, new Vector2(64, 64));
+        }
+        //
+        //
+        public void PlayerUpdateAnimations()
+        {
+            if (InputManager.Direction != Vector2.Zero)
+            {
+                switch (moveAngle / 90)
+                {
+                    case 0:
+                        animator = animWalkRight;
+                        break;
+                    case 1:
+                        animator = animWalkUp;
+                        break;
+                    case 2:
+                        animator = animWalkLeft;
+                        break;
+                    case 3:
+                        animator = animWalkDown;
+                        break;
+                    default:
+                        Debug.WriteLine("Default Animation");
+                        break;
+                }
+            }
+            else
+            {
+                switch (lastAngle / 90)
+                {
+                    case 0:
+                        animator = animIdleRight;
+                        break;
+                    case 1:
+                        animator = animIdleUp;
+                        break;
+                    case 2:
+                        animator = animIdleLeft;
+                        break;
+                    case 3:
+                        animator = animIdleDown;
+                        break;
+                    default:
+                        Debug.WriteLine("Default Animation");
+                        break;
+                }
+            };
         }
     }
 }

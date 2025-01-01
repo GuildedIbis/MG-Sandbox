@@ -12,7 +12,6 @@ namespace MG_Sandbox
         public static readonly double SCALE = 1.0;
         //
         public Texture2D texture;
-        public Texture2D spritesheet;
         public AnimationManager animator;
         public Vector2 position;
         public Color color;
@@ -43,11 +42,6 @@ namespace MG_Sandbox
         public virtual void Draw()
         {
             Globals.SpriteBatch.Draw(texture, Rect, Color.White);
-        }
-
-        public virtual void createAnimation()
-        {
-
         }
     }
 }

@@ -12,7 +12,6 @@ namespace MG_Sandbox.Managers
     {
         //
         Vector2 size;
-        Vector2 velocity;
         public int numCol = 0;
         public int rowPos = 0;
         public int colPos = 0;
@@ -39,38 +38,22 @@ namespace MG_Sandbox.Managers
             if (animKeys.Count >= 1)
             {
                 counter++;
-                //velocity = _velocity;
-                //Debug.WriteLine(counter);
-                //if (velocity != 0)
                 if (counter > interval)
                 {
-                    Debug.WriteLine(animKeys);
                     counter = 0;
                     localFrame++;
-                    //Debug.WriteLine(colPos);
                     if (localFrame >= animKeys.Count)
                     {
                         localFrame = 0;
 
                     }
-                    //SetDirection();
                 }
             }
         }
         //
         //
-        public void SetDirection()
-        {
-            //Set Dir
-            Debug.Write("animDir: ");
-            //Debug.WriteLine(animDir);
-            
-        }
-        //
-        //
         public Rectangle GetFrame()
         {
-            //Debug.WriteLine(animKeys.Count());
             if (animKeys.Count >= 1)
             {
                 colPos = animKeys.ElementAt(localFrame) % numCol;
@@ -83,16 +66,5 @@ namespace MG_Sandbox.Managers
                 (int)size.Y);
         }
         //
-        /*
-        public void MoveAnimation()
-        {
-            switch(animDir)
-            {
-                case 0:
-                    return anim
-                    break;
-            }
-        }
-        */
     }
 }

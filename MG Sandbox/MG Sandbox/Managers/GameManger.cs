@@ -19,7 +19,6 @@ namespace MG_Sandbox.Managers
             //Load Assets
             spritesheet = Globals.Content.Load<Texture2D>("spr_player_regaliare");
             player = new Player(spritesheet, new Vector2(0, 0), Color.White);
-            //Debug.WriteLine(entities.GetType);
             entities.Add(player);
             player.LoadContent();
         }
@@ -30,7 +29,6 @@ namespace MG_Sandbox.Managers
             InputManager.Update();
             foreach (var entity in entities)
             {
-                //Debug.WriteLine(entity);
                 entity.Update();
             }
         }
