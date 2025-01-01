@@ -11,11 +11,12 @@ namespace MG_Sandbox.Entities
 {
     internal class Player : Entity
     {
-        public List<int> animWalkRight;
-        public List<int> animWalkUp;
-        public List<int> animWalkLeft;
-        public List<int> animWalkDown;
+        public AnimationManager animWalkRight;
+        public AnimationManager animWalkUp;
+        public AnimationManager animWalkLeft;
+        public AnimationManager animWalkDown;
         int[] animKey = new int[] { };
+        List<int> keyList = new List<int>();
         public Player(Texture2D _texture, Vector2 _position, Color _color) : base(_texture, _position, _color)
         {
             texture = _texture;
@@ -27,27 +28,36 @@ namespace MG_Sandbox.Entities
             
             spritesheet = texture;
             speed = 40;
-            
+
+            //animator = new(16, new Microsoft.Xna.Framework.Vector2(64, 64));
+
             Debug.WriteLine("Player Loaded");
-            List<int> animWalkRight = new List<int>();
+            
             animKey = new int[] { 0, 1, 2, 3 };
-            animWalkRight.AddRange(animKey);
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkRight = new(keyList, 16, new Vector2(64, 64));
+            animator = animWalkRight;
 
-            List<int> animWalkUp = new List<int>();
             animKey =  new int[] { 4, 5, 6, 7 };
-            animWalkUp.AddRange(animKey);
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkUp = new(keyList, 16, new Vector2(64, 64));
+            animator = animWalkUp;
 
-            List<int> animWalkLeft = new List<int>();
             animKey = new int[] { 8, 9, 10, 11 };
-            animWalkLeft.AddRange(animKey);
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkLeft = new(keyList, 16, new Vector2(64, 64));
+            animator = animWalkLeft;
 
-            List<int> animWalkDown = new List<int>();
             animKey = new int[] { 12, 13, 14, 15 };
-            animWalkDown.AddRange(animKey);
+            keyList.Clear();
+            keyList.AddRange(animKey);
+            animWalkDown = new(keyList, 16, new Vector2(64, 64));
+            animator = animWalkDown;
 
-            //Debug.WriteLine(animWalkUp.Count);
-
-            animator = new(animWalkUp, 16, new Vector2(64, 64));
+            //Debug.WriteLine(animator.animations);
         }
         //
         //
@@ -82,19 +92,29 @@ namespace MG_Sandbox.Entities
                 var newY = (float)(position.Y + normDir.Y * speed * Globals.TotalSeconds);
                 var newPos = new Vector2(newX, newY);
                 moveAngle = MoveDirectionAngle((double)dir.X, (double)dir.Y);
-                animator.animDir = moveAngle / 90;
+                //animator.animDir = moveAngle / 90;
                 position = new Vector2(
                     MathHelper.Clamp(newPos.X, 0, Globals.Bounds.X),
                     MathHelper.Clamp(newPos.Y, 0, Globals.Bounds.Y)
                     );
-                if (InputManager.MoveKeyPressed)
-                { 
-                    switch (moveAngle / 90)
-                    {
-                        case 0:
-                            animator = new(animWalkRight, 16, new Vector2(64, 64));
-                            break;
-                    }
+                switch (moveAngle / 90)
+                {
+                    case 0:
+                        animator = animWalkRight;
+                        break;
+                    case 1:
+                        animator = animWalkUp;
+                        break;
+                    case 2:
+                        animator = animWalkLeft;
+                        break;
+                    case 3:
+                        animator = animWalkDown;
+                        break;
+                    default:
+                        Debug.WriteLine("Default Animation");
+                        animator = animWalkLeft;
+                        break;
                 }
 
             }

@@ -7,6 +7,6 @@ namespace MG_Sandbox.Managers
     internal class PhysicsManager
     {
         //Velocity Managment
-        //Z Height Management... Maybe
+        //Gravity for side scrolling phsyics
     }
 }
