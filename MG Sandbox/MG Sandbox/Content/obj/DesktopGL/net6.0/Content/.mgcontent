@@ -8,8 +8,10 @@
     <File>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_gui_healthbar_radial_fill_yellow.png</File>
     <File>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_player_regaliare.png</File>
     <File>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_pointer_basic_640.png</File>
+    <File>D:/GitHub/MG-Sandbox/MG Sandbox/MG Sandbox/Content/spr_simple_480x270.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

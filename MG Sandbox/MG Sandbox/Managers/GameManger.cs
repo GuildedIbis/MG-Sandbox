@@ -13,10 +13,12 @@ namespace MG_Sandbox.Managers
         List<Entity> entities = new();
         Player player;
         Texture2D spritesheet;
+        Texture2D background;
 
         public GameManager()
         {
             //Load Assets
+            background = Globals.Content.Load<Texture2D>("spr_simple_480x270"); 
             spritesheet = Globals.Content.Load<Texture2D>("spr_player_regaliare");
             player = new Player(spritesheet, new Vector2(0, 0), Color.White);
             entities.Add(player);
@@ -36,10 +38,12 @@ namespace MG_Sandbox.Managers
         //
         public void Draw()
         {
+            Globals.SpriteBatch.Draw(background, new Vector2(0, 0), Color.White);
             foreach (var entity in entities)
             {
                 entity.Draw();
             }
+            
         }
     }
 }

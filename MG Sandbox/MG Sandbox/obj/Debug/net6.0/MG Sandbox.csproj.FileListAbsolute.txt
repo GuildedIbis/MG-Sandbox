@@ -55,3 +55,4 @@ D:\GitHub\MG-Sandbox\MG Sandbox\MG Sandbox\obj\Debug\net6.0\MG Sandbox.genruntim
 D:\GitHub\MG-Sandbox\MG Sandbox\MG Sandbox\obj\Debug\net6.0\ref\MG Sandbox.dll
 D:\GitHub\MG-Sandbox\MG Sandbox\MG Sandbox\bin\Debug\net6.0\Content\spr_player_regaliare.xnb
 D:\GitHub\MG-Sandbox\MG Sandbox\MG Sandbox\bin\Debug\net6.0\Content\spr_pointer_basic_640.xnb
+D:\GitHub\MG-Sandbox\MG Sandbox\MG Sandbox\bin\Debug\net6.0\Content\spr_simple_480x270.xnb

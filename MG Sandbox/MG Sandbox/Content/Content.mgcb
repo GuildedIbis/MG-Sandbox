@@ -61,3 +61,15 @@
 /processorParam:TextureFormat=Color
 /build:spr_pointer_basic_640.png
 
+#begin spr_simple_480x270.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:spr_simple_480x270.png
+
