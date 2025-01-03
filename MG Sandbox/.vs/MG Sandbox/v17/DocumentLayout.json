@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\managers\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +19,16 @@
       "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\managers\\gamemanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|solutionrelative:mg sandbox\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF327B5B-A047-49CC-AE1E-666AB542134C}|MG Sandbox\\MG Sandbox.csproj|d:\\github\\mg-sandbox\\mg sandbox\\mg sandbox\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Entities\\Player.cs",
               "RelativeDocumentMoniker": "MG Sandbox\\Entities\\Player.cs",
               "ToolTip": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Entities\\Player.cs",
               "RelativeToolTip": "MG Sandbox\\Entities\\Player.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA7wDUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAxwFYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T23:12:09.28Z",
               "IsPinned": true,
@@ -64,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Program.cs",
               "RelativeDocumentMoniker": "MG Sandbox\\Program.cs",
@@ -77,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Global.cs",
               "DocumentMoniker": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Global.cs",
               "RelativeDocumentMoniker": "MG Sandbox\\Global.cs",
@@ -85,20 +85,20 @@
               "RelativeToolTip": "MG Sandbox\\Global.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T18:46:04.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T18:46:04.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "InputManager.cs",
               "DocumentMoniker": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Managers\\InputManager.cs",
               "RelativeDocumentMoniker": "MG Sandbox\\Managers\\InputManager.cs",
               "ToolTip": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Managers\\InputManager.cs",
               "RelativeToolTip": "MG Sandbox\\Managers\\InputManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wCQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T18:20:11.382Z"
+              "WhenOpened": "2024-12-28T18:20:11.382Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -126,13 +126,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
               "DocumentMoniker": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Game1.cs",
               "RelativeDocumentMoniker": "MG Sandbox\\Game1.cs",
               "ToolTip": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Game1.cs",
               "RelativeToolTip": "MG Sandbox\\Game1.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAowGgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAowGkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T04:53:51.525Z",
               "EditorCaption": ""
@@ -145,7 +145,7 @@
               "RelativeDocumentMoniker": "MG Sandbox\\Managers\\GameManger.cs",
               "ToolTip": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Managers\\GameManger.cs",
               "RelativeToolTip": "MG Sandbox\\Managers\\GameManger.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwA8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-28T18:20:56.425Z",
               "EditorCaption": ""
@@ -158,7 +158,7 @@
               "RelativeDocumentMoniker": "MG Sandbox\\Managers\\AnimationManager.cs",
               "ToolTip": "D:\\GitHub\\MG-Sandbox\\MG Sandbox\\MG Sandbox\\Managers\\AnimationManager.cs",
               "RelativeToolTip": "MG Sandbox\\Managers\\AnimationManager.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwBQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwD4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T01:51:11.196Z",
               "EditorCaption": ""

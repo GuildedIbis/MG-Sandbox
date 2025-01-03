@@ -44,14 +44,20 @@ namespace MG_Sandbox.Entities
             //PlayerCollide();
             PlayerUpdateAnimations();
             animator.Update();
+            //Debug.WriteLine(position.X);
+            //Debug.WriteLine(position.Y);
         }
         //
         //
         public override void Draw()
         {
+            int _drawPosX = (int)position.X;
+            int _drawPosY = (int)position.Y;
+            Debug.WriteLine(_drawPosX);
+            Debug.WriteLine(_drawPosY);
             Globals.SpriteBatch.Draw(
                 texture,
-                new Rectangle((int)position.X, (int)position.Y, 64, 64),
+                new Rectangle(_drawPosX, _drawPosY, 64, 64),
                 animator.GetFrame(),
                 Color.White
                 );
@@ -75,6 +81,7 @@ namespace MG_Sandbox.Entities
                     MathHelper.Clamp(newPos.X, 0, Globals.Bounds.X),
                     MathHelper.Clamp(newPos.Y, 0, Globals.Bounds.Y)
                     );
+                //position = position + normDir * speed * Globals.TotalSeconds;
             }
         }
         //
