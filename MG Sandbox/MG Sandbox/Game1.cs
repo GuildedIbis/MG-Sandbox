@@ -16,6 +16,7 @@ namespace MG_Sandbox
         private int _virtualWidth = 480;
         private int _virtualHeight = 270;
         private Matrix _screenScaleMatrix;
+        public bool vsync { get; private set; }
         private bool _isResizing;
         private Viewport _viewport;
         public Game1()
@@ -23,6 +24,7 @@ namespace MG_Sandbox
             _graphics = new GraphicsDeviceManager(this);
             _graphics.PreferredBackBufferWidth = _resolutionWidth;
             _graphics.PreferredBackBufferHeight = _resolutionHeight;
+            _graphics.SynchronizeWithVerticalRetrace = vsync;
             _graphics.ApplyChanges();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
